@@ -13,13 +13,23 @@ const Nav = () => {
 
         {currentPath === "/products" && (
           <>
+          <ScrollLink
+              className="scroll-link"
+              to="top"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={0}
+            >
+              Top 
+            </ScrollLink>
             <ScrollLink
               className="scroll-link"
               to="women"
               smooth={true}
               duration={500}
               spy={true}
-              offset={-70}
+              offset={-200}
             >
               Women
             </ScrollLink>
@@ -29,7 +39,7 @@ const Nav = () => {
               smooth={true}
               duration={500}
               spy={true}
-              offset={-70}
+              offset={-200}
             >
               Men
             </ScrollLink>
@@ -39,7 +49,7 @@ const Nav = () => {
               smooth={true}
               duration={500}
               spy={true}
-              offset={-70}
+              offset={-200}
             >
               Electronics
             </ScrollLink>
@@ -49,7 +59,7 @@ const Nav = () => {
               smooth={true}
               duration={500}
               spy={true}
-              offset={-70}
+              offset={200}
             >
               Jewelery
             </ScrollLink>

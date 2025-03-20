@@ -1,47 +1,49 @@
-.product_container {
-    display: block;
-    width: 100vw;
-    margin: 0 auto;
-}
-
 .cat_container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3rem;
-
+    gap: 5rem;
 }
 
 .product_container li:hover {
-    background-color: #f9f9f9;
+    background-color: aliceblue;
 }
 
 .cat_header {
     text-align: center;
-    margin-bottom: 3em;
+    margin: 10rem 0 6rem 0;
 }
 
 .product_item {
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;       
+    justify-content: space-between;    ;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: larger; 
 }
 
+
 .product_image {
-    max-height: 300px;
-    height: auto;
-    border-radius: 8px;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.price {
+    width: 100px;
+  
 }
 
 .number_input {
-  width: 50px;
-   height: 30px;
-   font-size: larger;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: center;
- 
+    width: 50px;
+    font-size: larger;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+     
 }

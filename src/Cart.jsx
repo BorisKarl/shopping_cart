@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import './Cart.css';
 
 const Cart = ({ cart, total, onDeleteItem, onUpdateQuantity }) => {
 
@@ -6,7 +6,7 @@ const Cart = ({ cart, total, onDeleteItem, onUpdateQuantity }) => {
     document.getElementById("cart_content").classList.toggle("show");
   }
   return (
-    <div className="cart-container">
+    <div className="cart_container">
       <button id="cart_button" onClick={showCart}>
         Cart
       </button>

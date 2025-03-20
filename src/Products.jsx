@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-// import { Link } from "react-scroll";
-
-
 import './Products.css';
 import Button from './Button.jsx';
 import Cart from './Cart.jsx';
 import Nav from './Nav.jsx';
+import Footer from "./Footer.jsx";
 
 const Products = () => {
   const [items, setItems] = useState([]);
@@ -110,14 +108,14 @@ const Products = () => {
     <>
       <Nav />
 
-      <div className="app-container">
+      <div className="app-container" id="top">
         <Cart
           cart={cart}
           total={total}
           onDeleteItem={deleteItem}
           onUpdateQuantity={onUpdateQuantity}
         />
-        <div className="product-container">
+        <div className="product_container">
           <h1 className="cat_header" id="women">
             Women&apos;s Clothing
           </h1>
@@ -131,7 +129,7 @@ const Products = () => {
                     src={item.image}
                     alt={item.title}
                   />
-                  <p>€ {item.price}</p>
+
                   <input
                     className="number_input"
                     type="number"
@@ -139,6 +137,7 @@ const Products = () => {
                     min={1}
                     placeholder={item.quantity}
                   />
+                  <p className="price">€ {item.price}</p>
                   <Button fontSize="22" onClick={() => addToCart(item)} />
                 </li>
               ))}
@@ -156,7 +155,7 @@ const Products = () => {
                     src={item.image}
                     alt={item.title}
                   />
-                  <p>€{item.price}</p>
+
                   <input
                     className="number_input"
                     type="number"
@@ -164,6 +163,7 @@ const Products = () => {
                     min={1}
                     placeholder={item.quantity}
                   />
+                  <p className="price">€ {item.price}</p>
                   <Button fontSize="22" onClick={() => addToCart(item)} />
                 </li>
               ))}
@@ -181,7 +181,7 @@ const Products = () => {
                     src={item.image}
                     alt={item.title}
                   />
-                  <p>€{item.price}</p>
+
                   <input
                     className="number_input"
                     type="number"
@@ -189,6 +189,7 @@ const Products = () => {
                     min={1}
                     placeholder={item.quantity}
                   />
+                  <p className="price">€ {item.price}</p>
                   <Button fontSize="22" onClick={() => addToCart(item)} />
                 </li>
               ))}
@@ -206,7 +207,7 @@ const Products = () => {
                     src={item.image}
                     alt={item.title}
                   />
-                  <p>€{item.price}</p>
+
                   <input
                     className="number_input"
                     type="number"
@@ -214,12 +215,14 @@ const Products = () => {
                     min={1}
                     placeholder={item.quantity}
                   />
+                  <p className="price">€ {item.price}</p>
                   <Button fontSize="22" onClick={() => addToCart(item)} />
                 </li>
               ))}
           </ul>
         </div>
       </div>
+      <Footer />
     </>
   );
   
